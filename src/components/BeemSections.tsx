@@ -1,6 +1,6 @@
 "use client"
 
-import { DollarSign, Home, HomeIcon, LayoutDashboard, Pen, SendToBack, Settings, Sun, Truck } from "lucide-react"
+import { BrickWall, Brush, Building, Clock, DollarSign, Home, HomeIcon, LandmarkIcon, LayoutDashboard, PaintBucket, Pen, PenToolIcon, SendToBack, Settings, Sun, Truck } from "lucide-react"
 import ChipViz from "./ChipViz"
 import { Orbit } from "./Orbit"
 import { MobileIcon, PersonIcon } from "@radix-ui/react-icons"
@@ -343,16 +343,16 @@ export default function BeamSections() {
 
             <div className="pointer-events-none relative h-full select-none">
               <div className="absolute top-[192px] left-[191.8px]">
-                <div className="flex h-12 w-12 items-center justify-center bg-white ring-1 shadow-sm ring-black/15">
-                  {/* <SolarMark className="h-8 w-8" /> */}
+                <div className="flex h-12 w-12 items-center justify-center bg-muted ring-1 shadow-sm ring-black/15">
+                  <Home className="h-8 w-8" />
                 </div>
               </div>
               <div className="absolute top-[144px] left-[48px]">
                 <div className="relative">
-                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
-                  <div className="relative flex h-12 w-12 items-center justify-center bg-white ring-1 shadow-sm ring-black/15">
-                    <span className="text-sm font-medium text-gray-500">
-                      14°C
+                  <div className="absolute inset-0 size-12 animate-pulse bg-primary blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center bg-primary ring-1 shadow-sm ring-black/15">
+                    <span className="text-sm font-medium">
+                      <Clock/>
                     </span>
                   </div>
                 </div>
@@ -360,10 +360,10 @@ export default function BeamSections() {
 
               <div className="absolute top-[48px] left-[144px]">
                 <div className="relative">
-                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
-                  <div className="relative flex h-12 w-12 items-center justify-center bg-white ring-1 shadow-sm ring-black/15">
-                    <span className="text-sm font-medium text-gray-500">
-                      18°C
+                  <div className="absolute inset-0 size-12 animate-pulse bg-background blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center border border-primary ring-1 shadow-sm ring-black/15">
+                    <span className="text-sm font-medium text-primary">
+                      <Brush/>
                     </span>
                   </div>
                 </div>
@@ -371,10 +371,10 @@ export default function BeamSections() {
 
               <div className="absolute top-[96px] left-[240px]">
                 <div className="relative">
-                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
-                  <div className="relative flex h-12 w-12 items-center justify-center bg-white ring-1 shadow-sm ring-black/15">
-                    <span className="text-sm font-medium text-gray-500">
-                      17°C
+                  <div className="absolute inset-0 size-12 animate-pulse bg-background blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center border border-primary ring-1 shadow-sm ring-black/15">
+                    <span className="text-sm font-medium text-primary">
+                      <Settings/>
                     </span>
                   </div>
                 </div>
@@ -382,10 +382,10 @@ export default function BeamSections() {
 
               <div className="absolute top-[240px] left-[385px]">
                 <div className="relative">
-                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
-                  <div className="relative flex h-12 w-12 items-center justify-center bg-white ring-1 shadow-sm ring-black/15">
-                    <span className="text-sm font-medium text-gray-500">
-                      14°C
+                  <div className="absolute inset-0 size-12 animate-pulse bg-background blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center border border-primary  ring-1 shadow-sm ring-black/15">
+                    <span className="text-sm font-medium text-primary">
+                      <PenToolIcon/>
                     </span>
                   </div>
                 </div>
@@ -393,10 +393,10 @@ export default function BeamSections() {
 
               <div className="absolute top-[337px] left-[336px]">
                 <div className="relative">
-                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
-                  <div className="relative flex h-12 w-12 items-center justify-center bg-white ring-1 shadow-sm ring-black/15">
-                    <span className="text-sm font-medium text-gray-500">
-                      12°C
+                  <div className="absolute inset-0 size-12 animate-pulse bg-background blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center border border-primary ring-1 shadow-sm ring-black/15">
+                    <span className="text-sm font-medium text-primary">
+                      <LandmarkIcon/>
                     </span>
                   </div>
                 </div>
@@ -404,10 +404,10 @@ export default function BeamSections() {
 
               <div className="absolute top-[288px] left-[144px]">
                 <div className="relative">
-                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
-                  <div className="relative flex h-12 w-12 items-center justify-center bg-white ring-1 shadow-sm ring-black/15">
-                    <span className="text-sm font-medium text-gray-500">
-                      17°C
+                  <div className="absolute inset-0 size-12 animate-pulse bg-background blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center border border-primary ring-1 shadow-sm ring-black/15">
+                    <span className="text-sm font-medium text-primary">
+                      <BrickWall/>
                     </span>
                   </div>
                 </div>
@@ -466,43 +466,23 @@ export default function BeamSections() {
           <div className="pointer-events-none relative flex size-full h-[26rem] items-center justify-center p-10 select-none">
             <div className="relative">
               <div className="absolute top-[6rem] left-[6rem] z-20">
-                <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10">
-                  <div className="w-fit rounded-full bg-linear-to-b from-white to-gray-100 p-3 ring-1 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.09),0_3px_5px_0_rgba(0,0,0,0.19)] ring-white/50 ring-inset">
-                    <Sun
-                      className="size-5 text-gray-900"
-                      aria-hidden="true"
-                    />
-                  </div>
+                <div className="relative mx-auto text-center font-bold rounded-lg bg-background p-2 ring-1 shadow-md shadow-black/10 ring-black/10">
+                Construction Provider
                 </div>
               </div>
               <div className="absolute top-[6rem] right-[6rem] z-20">
-                <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10">
-                  <div className="w-fit rounded-full bg-linear-to-b from-white to-gray-100 p-3 ring-1 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-white/50 ring-inset">
-                    <Sun
-                      className="size-5 text-gray-900"
-                      aria-hidden="true"
-                    />
-                  </div>
+                <div className="relative mx-auto text-center font-bold rounded-lg bg-background p-2 ring-1 shadow-md shadow-black/10 ring-black/10">
+                Application Manager
                 </div>
               </div>
               <div className="absolute right-[6rem] bottom-[6rem] z-20">
-                <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10">
-                  <div className="w-fit rounded-full bg-linear-to-b from-white to-gray-100 p-3 ring-1 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-white/50 ring-inset">
-                    <Sun
-                      className="size-5 text-gray-900"
-                      aria-hidden="true"
-                    />
-                  </div>
+                <div className="relative mx-auto text-center font-bold rounded-lg bg-background p-2 ring-1 shadow-md shadow-black/10 ring-black/10">
+                Configurator Quote
                 </div>
               </div>
               <div className="absolute bottom-[6rem] left-[6rem] z-20">
-                <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10">
-                  <div className="w-fit rounded-full bg-linear-to-b from-white to-gray-100 p-3 ring-1 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-white/50 ring-inset">
-                    <Sun
-                      className="size-5 text-gray-900"
-                      aria-hidden="true"
-                    />
-                  </div>
+                <div className="relative mx-auto text-center font-bold rounded-lg bg-background p-2 ring-1 shadow-md shadow-black/10 ring-black/10">
+                Extensions Expert
                 </div>
               </div>
             </div>
