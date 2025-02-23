@@ -9,7 +9,7 @@ const nextConfig = {
     unoptimized: false,
   },
   trailingSlash: true,
-  distDir: "out",
+  // distDir: "out",
   // output: "export",
 };
 
