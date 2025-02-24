@@ -138,7 +138,7 @@ export default function SideBar() {
                                                 <p className="text-muted-foreground">{subMaterial.name}</p>
                                                 <div className="flex items-center overflow-x-scroll gap-x-4">
                                                     {subMaterial.items.map((image) => (
-                                                        <div key={image.src} className="relative">
+                                                        <div key={image.src} className="relative dark:bg-accent rounded-xl">
                                                             {finalQuote.exterior.find((x: any) => x.key === material.key && x.objectSrc === image.objectSrc) &&
                                                                 <span className="absolute top-0 right-0 z-20 bg-primary text-black rounded-xl size-5 flex justify-center items-center"><Check className="size-4" /></span>
                                                             }
@@ -202,7 +202,7 @@ export default function SideBar() {
                                                 <p className="text-muted-foreground">{subMaterial.name}</p>
                                                 <div className="flex items-center overflow-x-scroll gap-x-4">
                                                     {subMaterial.items.map((image) => (
-                                                        <div key={image.src} className="relative">
+                                                        <div key={image.src} className="relative dark:bg-accent rounded-xl">
                                                             {finalQuote.interior.find((x: any) => x.key === material.key && x.objectSrc === image.objectSrc) &&
                                                                 <span className="absolute top-0 right-0 z-20 bg-primary text-black rounded-xl size-5 flex justify-center items-center"><Check className="size-4" /></span>
                                                             }

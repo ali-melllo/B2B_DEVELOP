@@ -38,6 +38,7 @@ import {
   BookOpenIcon,
   HeartIcon,
   ShoppingCartIcon,
+  BadgeSwissFranc,
 } from "lucide-react";
 
 
@@ -337,14 +338,14 @@ export const STEPS = [
   {
     question: "What is your estimated budget for the project?",
     items: [
-      { name: "Less than CHF500,000,", icon: DollarSignIcon },
-      { name: "CHF500,000 - CHF1M", icon: DollarSignIcon },
-      { name: "CHF1M - CHF4M", icon: DollarSignIcon },
-      { name: "CHF4M - CHF12M", icon: DollarSignIcon },
-      { name: "CHF12M - CHF14M", icon: DollarSignIcon },
-      { name: "CHF14M - CHF25M", icon: DollarSignIcon },
-      { name: "CHF25M - CHF50M", icon: DollarSignIcon },
-      { name: "More than CHF50M", icon: DollarSignIcon },
+      { name: "Less than CHF500,000,", icon: BadgeSwissFranc },
+      { name: "CHF500,000 - CHF1M", icon: BadgeSwissFranc },
+      { name: "CHF1M - CHF4M", icon: BadgeSwissFranc },
+      { name: "CHF4M - CHF12M", icon: BadgeSwissFranc },
+      { name: "CHF12M - CHF14M", icon: BadgeSwissFranc },
+      { name: "CHF14M - CHF25M", icon: BadgeSwissFranc },
+      { name: "CHF25M - CHF50M", icon: BadgeSwissFranc },
+      { name: "More than CHF50M", icon: BadgeSwissFranc },
     ],
   },
   {

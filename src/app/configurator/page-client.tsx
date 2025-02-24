@@ -10,7 +10,7 @@ import SubmitModal from "@/components/main/modals/submit-modal";
 
 export default function PageClient() {
 
-  const { showExterior, finalQuote, view, showInside } = useSelector((state: any) => state.global);
+  const { showExterior, finalQuote, view, showInside, showFloor } = useSelector((state: any) => state.global);
   const [imageLoaded, setImageLoaded] = useState<boolean>(true);
 
 
@@ -18,7 +18,7 @@ export default function PageClient() {
 
   useEffect(() => {
     setImageLoaded(false);
-  }, [showExterior, view, showInside]);
+  }, [showExterior, view, showInside , showFloor]);
 
   const changeViewHandler = useCallback((view: string) => {
     dispatch(changeView(view));
@@ -34,7 +34,7 @@ export default function PageClient() {
 
 
   return (
-    <main className="relative overflow-hidden shadow-2xl flex h-6/12 md:h-screen">
+    <main className="relative overflow-hidden shadow-2xl flex max-h-[40vh] h-6/12 md:h-screen">
 
       <div className="flex cursor-pointer gap-x-3 absolute z-50 left-3 top top-[5.5em]">
         <div onClick={() => changeViewHandler('floor')} className="size-[2.75em] md:size-20 flex flex-col transition-all duration-200 justify-between hover:scale-105 rounded-xl shadow-xl">

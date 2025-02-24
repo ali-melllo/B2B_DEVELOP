@@ -71,14 +71,14 @@ export default function SubmitModal() {
 
     return (
         <Dialog open={showFinalQuoteModal} >
-            <DialogContent onCloseHandler={() => dispatch(changeShowFinalQuoteModal(false))} className="max-w-[95vw] md:w-6/12 rounded-2xl max-h-[85vh] ">
+            <DialogContent onCloseHandler={() => dispatch(changeShowFinalQuoteModal(false))} className="max-w-[95vw] flex flex-col overflow-visible md:w-6/12 rounded-2xl md:max-h-[85vh] ">
                 <DialogHeader>
                     <DialogTitle className="text-left">Submit Price Request</DialogTitle>
                     <DialogDescription className="text-left text-xs md:text-sm">
                         Make a quote to get your selected services exact price in your email. please ensure that you enter the right email , our team will answer very soon.
                     </DialogDescription>
                 </DialogHeader>
-                <Card className="w-full mt-5">
+                {/* <Card className="w-full mt-5">
                     <CardContent>
                         <div className="grid w-full items-center gap-y-2 pt-5">
                             <div className="flex flex-row justify-between gap-x-3 items-center">
@@ -112,7 +112,7 @@ export default function SubmitModal() {
                         </div>
 
                     </CardContent>
-                </Card>
+                </Card> */}
                 <div autoFocus={false} className="grid gap-4 py-4">
                     <form onSubmit={handleSubmit(sendEmail)} className="grid gap-4 py-4">
                         <div className="flex flex-col items-start gap-y-2">
