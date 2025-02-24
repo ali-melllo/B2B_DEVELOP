@@ -34,7 +34,7 @@ export default function PageClient() {
 
 
   return (
-    <main className="relative overflow-hidden shadow-2xl flex max-h-[40vh] h-6/12 md:h-screen">
+    <main className="relative overflow-hidden shadow-2xl flex max-h-[40vh] md:max-h-screen h-6/12 md:h-screen">
 
       <div className="flex cursor-pointer gap-x-3 absolute z-50 left-3 top top-[5.5em]">
         <div onClick={() => changeViewHandler('floor')} className="size-[2.75em] md:size-20 flex flex-col transition-all duration-200 justify-between hover:scale-105 rounded-xl shadow-xl">
