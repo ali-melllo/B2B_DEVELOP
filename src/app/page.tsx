@@ -1,6 +1,7 @@
 "use client"
 
 import BeamSections from "@/components/BeemSections";
+import CallToAction from "@/components/CallToAction";
 import Features from "@/components/Features";
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
@@ -16,7 +17,7 @@ export default function Page() {
   const { buildingStep } = useSelector((state: any) => state.global);
 
   return (
-    <div className="mx-auto max-w-6xl ">
+    <div className="mx-auto overflow-hidden max-w-6xl ">
 
       <HeroLight />
 
@@ -33,6 +34,12 @@ export default function Page() {
           <BeamSections />
         </div>
 
+        <div className="mt-52 px-3 md:px-5">
+
+          <CallToAction/>
+        
+        </div>
+        
         <Footer />
       </> :
         <StepperPage />

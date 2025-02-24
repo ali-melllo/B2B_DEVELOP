@@ -6,13 +6,17 @@ import React, { useEffect, useState } from "react"
 import useScroll from "@/lib/use-scroll"
 import { Button } from "./ui/button"
 import { DashboardIcon } from "@radix-ui/react-icons"
-import { Home, LayoutDashboard, Settings } from "lucide-react"
+import { CircleHelp, Home, LayoutDashboard, Settings } from "lucide-react"
 import { ModeToggle } from "./mode-toggle"
 import { usePathname } from "next/navigation"
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip"
+import { useDispatch } from "react-redux"
+import { changeFrequentlyAskedModal } from "@/redux/globalSlice"
 
 export function Header() {
   const scrolled = useScroll(15);
   const path = usePathname();
+  const dispatch = useDispatch();
 
   const [open, setOpen] = useState(false)
 
@@ -23,7 +27,7 @@ export function Header() {
   }, []);
 
 
-  
+
   useEffect(() => {
     const mediaQuery: MediaQueryList = window.matchMedia("(min-width: 768px)")
     const handleMediaQueryChange = () => {
@@ -58,7 +62,7 @@ export function Header() {
             aria-label="Home">
             <span className="sr-only">Company logo</span>
             <Home className="size-8" />
-            Wood Lands
+            Greenland
           </Link>
           <nav className="hidden md:absolute md:left-1/2 md:top-1/2 md:block md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
             <div className="flex items-center gap-10 font-medium">
@@ -66,27 +70,42 @@ export function Header() {
                 className="px-2 py-1 text-gray-900 dark:text-gray-50"
                 href={"#"}
               >
-                About
+                Home
               </Link>
               <Link
                 className="px-2 py-1 text-gray-900 dark:text-gray-50"
                 href={"#"}
               >
-                Pricing
+                Configurator
               </Link>
-              <Link
-                className="px-2 py-1 text-gray-900 dark:text-gray-50"
-                href={"#"}
-              >
-                Changelog
-              </Link>
+              <Tooltip>
+                <TooltipTrigger onClick={() => dispatch(changeFrequentlyAskedModal(true))} asChild>
+                  <div className="flex flex-nowrap gap-2 items-center">
+                    <p className="text-nowrap text-base">To Ask</p>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Frequently Asked</p>
+                </TooltipContent>
+              </Tooltip>
             </div>
+
           </nav>
 
+          <div className="hidden md:flex gap-5 items-center">
             <ModeToggle />
+            <Link
+              className="px-2 py-1 text-gray-900 bg-primary rounded-lg dark:text-gray-50"
+              href={"/configurator"}
+            >
+              Configurator
+            </Link>
+
+          </div>
 
           <div className="flex gap-x-2 md:hidden">
-            <Button>Book demo</Button>
+            <ModeToggle />
+
             <Button
               onClick={() => setOpen(!open)}
               className="aspect-square p-2"
@@ -99,6 +118,7 @@ export function Header() {
             </Button>
           </div>
         </div>
+
         <nav
           className={cn(
             "my-6 flex text-lg ease-in-out will-change-transform md:hidden",
@@ -108,22 +128,47 @@ export function Header() {
           <ul className="space-y-4 font-medium">
             <li onClick={() => setOpen(false)}>
               <Link
-                href={"#"}
-              >About</Link>
+                href={"/"}
+              >Home</Link>
             </li>
             <li onClick={() => setOpen(false)}>
 
-              <Link href={"#"}>Pricing</Link>
+              <Link href={"/configurator"}>Configurator</Link>
             </li>
-            <li onClick={() => setOpen(false)}>
-              <Link href={"#"}>Changelog</Link>
-            </li>
+            <Tooltip >
+              <TooltipTrigger onClick={() => { setOpen(false); dispatch(changeFrequentlyAskedModal(true)) }} asChild>
+                <div className="flex flex-nowrap gap-2 items-center">
+                  <p className="text-nowrap text-base">To Ask</p>
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Frequently Asked</p>
+              </TooltipContent>
+            </Tooltip>
           </ul>
         </nav>
       </div>
     </header>
-  ) : 
-  <header className="h-20 z-50 w-full bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] fixed top-0">
+  ) :
+    <header className="h-20 flex justify-between items-center px-5 z-50 w-full bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] fixed top-0">
+      <Button>
+        Back To Home
+      </Button>
 
-  </header>
+      <div className="flex gap-5 items-center">
+        <ModeToggle />
+
+        <Tooltip>
+          <TooltipTrigger onClick={() => dispatch(changeFrequentlyAskedModal(true))} asChild>
+            <div className="flex flex-nowrap gap-2 items-center">
+              <CircleHelp className="size-6" />
+              <p className="text-nowrap text-base">To Ask</p>
+            </div>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Frequently Asked</p>
+          </TooltipContent>
+        </Tooltip>
+      </div>
+    </header>
 }

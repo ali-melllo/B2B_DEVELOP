@@ -32,6 +32,9 @@ export default function SubmitModal() {
         return finalQuote.interior.reduce((total: any, item: any) => total + (Number(item.price) || 0), 0);
     }, [finalQuote]);
 
+    const getFloorPrice = useCallback(() => {
+        return finalQuote.floor.reduce((total: any, item: any) => total + (Number(item.price) || 0), 0);
+    }, [finalQuote]);
     
     const sendEmail = useCallback(async (data:any) => {
         setEmailLoading(true);
@@ -99,6 +102,10 @@ export default function SubmitModal() {
                                 <Label className="text-base text-muted-foreground">€ {getInsidePrice()}</Label>
                             </div>
                             <div className="flex flex-row justify-between gap-x-3 items-center">
+                                <Label className="font-semibold text-base">Floor:</Label>
+                                <Label className="text-base text-muted-foreground">€ {getFloorPrice()}</Label>
+                            </div>
+                            <div className="flex flex-row justify-between gap-x-3 items-center">
                                 <Label className="font-semibold text-base">Total:</Label>
                                 <Label className="text-base text-muted-foreground">€ {formatEuroPrice((getInsidePrice() + getExteriorPrice() || '0'))}</Label>
                             </div>
@@ -117,6 +124,16 @@ export default function SubmitModal() {
                             <Label>Email</Label>
                             <Input {...register("email", { required: "Email is required" })} placeholder="Email" />
                             {errors.email && <p className="text-red-500 text-sm">{"Email is required"}</p>}
+                        </div>
+                        <div className="flex flex-col items-start gap-y-2">
+                            <Label>Phone</Label>
+                            <Input {...register("phone", { required: "phone is required" })} placeholder="phone" />
+                            {errors.phone && <p className="text-red-500 text-sm">{"phone is required"}</p>}
+                        </div>
+                        <div className="flex flex-col items-start gap-y-2">
+                            <Label>zip code</Label>
+                            <Input {...register("zip code", { required: "zip code is required" })} placeholder="zip code" />
+                            {errors.zipCode && <p className="text-red-500 text-sm">{"zip code is required"}</p>}
                         </div>
                         <DialogFooter>
                             <Button disabled={emailLoading} className="w-full h-12 font-semibold" type="submit">

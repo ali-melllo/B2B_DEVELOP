@@ -64,9 +64,9 @@ export const globalSlice: any = createSlice({
       state.showFrequentlyAskedModal = action.payload;
     },
     changeShowFinalQuoteModal: (state, action: PayloadAction<boolean>) => {
-      if (!state.finalQuote.depth || !state.finalQuote.width) {
+      if (!state.finalQuote.depth || !state.finalQuote.width ) {
         toast("Please Define your surface area");
-      } else if (state.finalQuote.exterior.length === 0 && state.finalQuote.interior.length === 0) {
+      } else if (state.finalQuote.exterior.length === 0 && state.finalQuote.interior.length === 0 && state.finalQuote.floor.length === 0) {
         toast("You Haven't choose any obstacles yet");
       } else {
         state.showFinalQuoteModal = action.payload;

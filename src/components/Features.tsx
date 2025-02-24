@@ -26,7 +26,7 @@ export default function Features() {
     >
       <h2
         id="features-title"
-        className="mt-64 inline-block text-center w-full bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
+        className="mt-44 md:mt-64 inline-block text-center w-full bg-gradient-to-br from-gray-900 to-gray-800 bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
       >
         Built for Efficiency and Sustainability
       </h2>

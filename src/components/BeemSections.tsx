@@ -315,7 +315,7 @@ export default function BeamSections() {
                     <path
                       key={i}
                       d={`M${-106 + offset} 110L${22 + offset} -18`}
-                      className="stroke-gray-200/70"
+                      className="stroke-muted"
                       strokeWidth="1"
                     />
                   )
@@ -450,7 +450,7 @@ export default function BeamSections() {
                     <path
                       key={i}
                       d={`M${-106 + offset} 110L${22 + offset} -18`}
-                      className="stroke-gray-200/70"
+                      className="stroke-muted"
                       strokeWidth="1"
                     />
                   )
@@ -465,22 +465,22 @@ export default function BeamSections() {
           </svg>
           <div className="pointer-events-none relative flex size-full h-[26rem] items-center justify-center p-10 select-none">
             <div className="relative">
-              <div className="absolute top-[6rem] left-[6rem] z-20">
+              <div className="absolute top-[6rem] left-[4em] md:left-[6rem] z-20">
                 <div className="relative mx-auto text-center font-bold rounded-lg bg-background p-2 ring-1 shadow-md shadow-black/10 ring-black/10">
                 Construction Provider
                 </div>
               </div>
-              <div className="absolute top-[6rem] right-[6rem] z-20">
+              <div className="absolute top-[6rem] right-[4em] md:right-[6rem] z-20">
                 <div className="relative mx-auto text-center font-bold rounded-lg bg-background p-2 ring-1 shadow-md shadow-black/10 ring-black/10">
                 Application Manager
                 </div>
               </div>
-              <div className="absolute right-[6rem] bottom-[6rem] z-20">
+              <div className="absolute right-[4em] md:right-[6rem] bottom-[6rem] z-20">
                 <div className="relative mx-auto text-center font-bold rounded-lg bg-background p-2 ring-1 shadow-md shadow-black/10 ring-black/10">
                 Configurator Quote
                 </div>
               </div>
-              <div className="absolute bottom-[6rem] left-[6rem] z-20">
+              <div className="absolute bottom-[6rem] left-[4em] md:left-[6rem] z-20">
                 <div className="relative mx-auto text-center font-bold rounded-lg bg-background p-2 ring-1 shadow-md shadow-black/10 ring-black/10">
                 Extensions Expert
                 </div>

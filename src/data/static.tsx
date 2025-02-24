@@ -228,12 +228,13 @@ export const PROJECTS_GALLERY_DATA = [
   { src: '/projects/project-15.avif' },
 ]
 
+
 export const STEPS = [
   {
-    question: "Which part of your building would you start first?",
+    question: "Which part of your building?",
     items: [
       { name: "Foundation & Groundwork", icon: RulerIcon },
-      { name: "Structural Framing", icon: HammerIcon },
+      { name: "Flooring and Internal Design", icon: HammerIcon },
       { name: "Roofing & Insulation", icon: HomeIcon },
       { name: "Exterior Walls & Cladding", icon: PaintbrushIcon },
       { name: "Windows & Doors", icon: DoorOpenIcon },
@@ -243,15 +244,15 @@ export const STEPS = [
     ],
   },
   {
-    question: "How should painting be done?",
+    question: "What kind of Green flooring you want?",
     items: [
-      { name: "Spray Painting", icon: PaintbrushIcon },
-      { name: "Roller Painting", icon: PaintbrushIcon },
-      { name: "Brush Painting", icon: PaintbrushIcon },
-      { name: "Textured Finish", icon: PaintbrushIcon },
-      { name: "Matte Finish", icon: PaintbrushIcon },
-      { name: "Glossy Finish", icon: PaintbrushIcon },
-      { name: "Weatherproof Paint", icon: PaintbrushIcon },
+      { name: "Rice Straw Wood", icon: PaintbrushIcon },
+      { name: "Recycled Plastic PVC", icon: PaintbrushIcon },
+      { name: "Hemp Parquet Wood ", icon: PaintbrushIcon },
+      { name: "Old Wood", icon: PaintbrushIcon },
+      { name: "Matte Floor", icon: PaintbrushIcon },
+      { name: "Glossy Floor", icon: PaintbrushIcon },
+      { name: "Weatherproof Floor", icon: PaintbrushIcon },
       { name: "Eco-Friendly Paint", icon: PaintbrushIcon },
     ],
   },
@@ -261,7 +262,7 @@ export const STEPS = [
       { name: "Residential", icon: HomeIcon },
       { name: "Commercial", icon: BuildingIcon },
       { name: "Industrial", icon: FactoryIcon },
-      { name: "Mixed-Use", icon: LayersIcon },
+      { name: "Hotel", icon: LayersIcon },
       { name: "Retail", icon: ShoppingCartIcon },
       { name: "Hospitality", icon: BedIcon },
       { name: "Healthcare", icon: HeartIcon },
@@ -271,44 +272,44 @@ export const STEPS = [
   {
     question: "How large is the surface area?",
     items: [
-      { name: "Less than 100 sqm", icon: RulerIcon },
-      { name: "100-500 sqm", icon: RulerIcon },
-      { name: "500-1000 sqm", icon: RulerIcon },
-      { name: "1000-5000 sqm", icon: RulerIcon },
-      { name: "5000-10,000 sqm", icon: RulerIcon },
-      { name: "10,000-50,000 sqm", icon: RulerIcon },
-      { name: "More than 50,000 sqm", icon: RulerIcon },
+      { name: "1000m² or less", icon: RulerIcon },
+      { name: "1000-6000m²", icon: RulerIcon },
+      { name: "6000-12000m²", icon: RulerIcon },
+      { name: "12000-25000m²", icon: RulerIcon },
+      { name: "25000-200,000m²", icon: RulerIcon },
+      { name: "250,000-500,000m²", icon: RulerIcon },
+      { name: "More than 500,000m²", icon: RulerIcon },
       { name: "Custom Size", icon: RulerIcon },
     ],
   },
   {
-    question: "How many floors does the building have?",
+    question: "When is the planned realization?",
     items: [
-      { name: "1 Floor", icon: LayersIcon },
-      { name: "2 Floors", icon: LayersIcon },
-      { name: "3 Floors", icon: LayersIcon },
-      { name: "4-6 Floors", icon: LayersIcon },
-      { name: "7-10 Floors", icon: LayersIcon },
-      { name: "11-20 Floors", icon: LayersIcon },
+      { name: "Less than 1 month", icon: LayersIcon },
+      { name: "1 till 2 years", icon: LayersIcon },
+      { name: "2 till 3 months", icon: LayersIcon },
+      { name: "3 till 4 years", icon: LayersIcon },
+      { name: "4-5 years", icon: LayersIcon },
+      { name: "x", icon: LayersIcon },
       { name: "More than 20 Floors", icon: LayersIcon },
       { name: "Skyscraper", icon: LayersIcon },
     ],
   },
   {
-    question: "What is the facade made of?",
+    question: "What is current floor made of?",
     items: [
-      { name: "Brick", icon: BrickWallIcon },
+      { name: "New Project", icon: BrickWallIcon },
       { name: "Concrete", icon: BuildingIcon },
-      { name: "Glass", icon: GlassWater },
+      { name: "Laminate", icon: GlassWater },
       { name: "Metal", icon: ShieldIcon },
-      { name: "Wood", icon: TreesIcon },
+      { name: "Hard Wood", icon: TreesIcon },
       { name: "Composite Panels", icon: GridIcon },
       { name: "Stone", icon: MountainIcon },
       { name: "Ceramic Tiles", icon: LayersIcon },
     ],
   },
   {
-    question: "What is the condition of the facade?",
+    question: "What is the condition of the Floor?",
     items: [
       { name: "New", icon: CheckIcon },
       { name: "Good", icon: ThumbsUpIcon },
@@ -321,7 +322,7 @@ export const STEPS = [
     ],
   },
   {
-    question: "When will the new facade be finished?",
+    question: "When is your customer expecting your quote?",
     items: [
       { name: "Less than 1 month", icon: ClockIcon },
       { name: "1-3 months", icon: ClockIcon },
@@ -336,18 +337,18 @@ export const STEPS = [
   {
     question: "What is your estimated budget for the project?",
     items: [
-      { name: "Less than $10,000", icon: DollarSignIcon },
-      { name: "$10,000 - $50,000", icon: DollarSignIcon },
-      { name: "$50,000 - $100,000", icon: DollarSignIcon },
-      { name: "$100,000 - $500,000", icon: DollarSignIcon },
-      { name: "$500,000 - $1M", icon: DollarSignIcon },
-      { name: "$1M - $5M", icon: DollarSignIcon },
-      { name: "$5M - $10M", icon: DollarSignIcon },
-      { name: "More than $10M", icon: DollarSignIcon },
+      { name: "Less than CHF500,000,", icon: DollarSignIcon },
+      { name: "CHF500,000 - CHF1M", icon: DollarSignIcon },
+      { name: "CHF1M - CHF4M", icon: DollarSignIcon },
+      { name: "CHF4M - CHF12M", icon: DollarSignIcon },
+      { name: "CHF12M - CHF14M", icon: DollarSignIcon },
+      { name: "CHF14M - CHF25M", icon: DollarSignIcon },
+      { name: "CHF25M - CHF50M", icon: DollarSignIcon },
+      { name: "More than CHF50M", icon: DollarSignIcon },
     ],
   },
   {
-    question: "What sustainability features are included?",
+    question: "What other sustainability features needed?",
     items: [
       { name: "Solar Panels", icon: SunIcon },
       { name: "Rainwater Harvesting", icon: CloudRainIcon },
@@ -365,7 +366,7 @@ export const STEPS = [
       { name: "Architectural Design", icon: BuildingIcon },
       { name: "Engineering Consultation", icon: WrenchIcon },
       { name: "Interior Design", icon: HomeIcon },
-      { name: "Project Management", icon: ClipboardListIcon },
+      { name: "None", icon: ClipboardListIcon },
       { name: "Structural Assessment", icon: ShieldIcon },
       { name: "Energy Audit", icon: BatteryIcon },
       { name: "Safety Inspection", icon: ShieldCheckIcon },
@@ -373,8 +374,6 @@ export const STEPS = [
     ],
   },
 ];
-
-
 
 export const DATA = {
   name: "Configurator",
